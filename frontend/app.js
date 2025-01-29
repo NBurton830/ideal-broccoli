@@ -11,8 +11,8 @@ document.getElementById('create-feature-form').addEventListener('submit', async 
         body: JSON.stringify({ title, description, category, userId: 'user123' }),
     });
 
-    const feature = await response.json();
-    displayFeature(feature);
+    console.log(features); // Log the fetched features
+    features.forEach(feature => displayFeature(feature));
 });
 
 async function fetchFeatures() {

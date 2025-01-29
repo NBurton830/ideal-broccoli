@@ -1,12 +1,17 @@
 const express = require('express');
-const connectDB = require('./config/db');  // Import the connectDB function
+const path = require('path');
 
 const app = express();
+const port = 5000;
 
-// Connect to MongoDB
-connectDB();
+// Correct the path to serve static files
+app.use(express.static(path.join(__dirname, '../frontend'))); // Go up one level to root
 
-const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
+// Serve the index.html from the frontend folder
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, '../frontend', 'index.html')); // Go up one level to root
+});
+
+app.listen(port, () => {
+    console.log(`Server is running on http://localhost:${port}`);
 });
