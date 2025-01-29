@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kanban Board</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <div id="app">
+        <h1>Kanban Board</h1>
+        <div id="feature-list"></div>
+        <form id="create-feature-form">
+            <input type="text" id="title" placeholder="Feature Title" required>
+            <textarea id="description" placeholder="Feature Description" required></textarea>
+            <select id="category" required>
+                <option value="Feature Request">Feature Request</option>
+                <option value="Bug Fix">Bug Fix</option>
+            </select>
+            <button type="submit">Create Feature</button>
+        </form>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

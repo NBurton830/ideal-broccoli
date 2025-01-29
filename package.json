@@ -1,0 +1,23 @@
+{
+    "name": "kanban-app",
+    "version": "1.0.0",
+    "description": "Kanban board app for voting and managing features",
+    "main": "server.js",
+    "scripts": {
+      "start": "node backend/server.js",
+      "dev": "nodemon backend/server.js"
+    },
+    "dependencies": {
+      "express": "^4.17.1",
+      "mongoose": "^5.10.9",
+      "dotenv": "^8.2.0",
+      "body-parser": "^1.19.0",
+      "cors": "^2.8.5"
+    },
+    "devDependencies": {
+      "nodemon": "^2.0.6"
+    },
+    "author": "",
+    "license": "ISC"
+  }
+  
